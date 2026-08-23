@@ -1,210 +1,385 @@
-// ========================================
-// DATOS DE LA PÁGINA
-// ========================================
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
-const contenidos = {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    actividades: [
-
-        {
-            nombre: "Lengua",
-            icono: "📖",
-            descripcion:
-                "Actividades de lectura, escritura y comprensión."
-        },
-
-        {
-            nombre: "Matemática",
-            icono: "🔢",
-            descripcion:
-                "Actividades de números, operaciones y fracciones."
-        },
-
-        {
-            nombre: "Ciencias Sociales",
-            icono: "🌎",
-            descripcion:
-                "Actividades sobre nuestra provincia, el país y la sociedad.",
-            trabajo:
-                "Proyecto Aula sobre ruedas",
-            archivo:
-                "Proyecto-Aula-sobre-ruedas.pdf"
-        },
-
-        {
-            nombre: "Ciencias Naturales",
-            icono: "🔬",
-            descripcion:
-                "Actividades sobre los seres vivos, el ambiente y la naturaleza.",
-            trabajo:
-                "Flora y Fauna del Chaco",
-            fecha:
-                "15 de septiembre de 2026",
-            archivo:
-                "trabajo-flora-fauna-chaco.pdf"
-        }
-
-    ],
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+}
 
 
-    proyectos: [
+/* =========================
+   MENÚ
+========================= */
 
-        {
-            nombre: "Feria de Ciencias",
-            icono: "🧪",
-            descripcion:
-                "Proyecto de bioplástico realizado para la Feria de Ciencias.",
-            archivo:
-                "Feria-de-Ciencias-bioplastico.pdf"
-        }
+nav {
+    background-color: white;
 
-    ],
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    padding: 18px 40px;
 
-    lecturas: [
+    position: sticky;
+    top: 0;
 
-        {
-            nombre: "Casiperro del Hambre",
-            icono: "📚",
-            descripcion:
-                "Aventuras y desventuras de Casiperro del Hambre.",
-            archivo:
-                "Aventuras-Desventuras-casiperro-Del-Hambre.pdf"
-        }
+    z-index: 100;
 
-    ],
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
 
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1976d2;
+}
 
-    novedades: [
+.menu {
+    display: flex;
+    gap: 25px;
+}
 
-        {
-            nombre: "Próximamente",
-            icono: "📢",
-            descripcion:
-                "En este espacio se publicarán las novedades importantes para las familias."
-        }
+.menu a {
+    text-decoration: none;
+    color: #263238;
+    font-weight: bold;
 
-    ]
+    transition: color 0.2s;
+}
 
-};
-
-
-// ========================================
-// MOSTRAR CONTENIDO
-// ========================================
-
-function mostrarContenido(seccion) {
-
-    const contenedor =
-        document.getElementById("contenido-" + seccion);
-
-    const boton =
-        document.querySelector("#" + seccion + " button");
+.menu a:hover {
+    color: #1976d2;
+}
 
 
-    // Mostrar / ocultar
+/* =========================
+   ENCABEZADO
+========================= */
 
-    contenedor.classList.toggle("mostrar");
+header {
+    background-image:
+        linear-gradient(
+            rgba(25, 118, 210, 0.65),
+            rgba(66, 165, 245, 0.65)
+        ),
+        url("tanque.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 70px 20px;
+}
+
+.hero {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    text-align: left;
+}
+
+.subtitulo {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
 
 
-    // Si está oculto, cambiar botón
+/* =========================
+   BOTÓN DEL ENCABEZADO
+========================= */
 
-    if (!contenedor.classList.contains("mostrar")) {
+.boton {
+    display: inline-block;
 
-        boton.textContent =
-            "Ver " + seccion;
+    background-color: white;
 
-        return;
+    color: #1976d2;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: transform 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjeta {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icono {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta h2 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+    color: #1976d2;
+}
+
+.tarjeta p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BOTONES DE LAS TARJETAS
+========================= */
+
+.tarjeta button {
+    margin-top: 20px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #1976d2;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+.tarjeta button:hover {
+    background-color: #1565c0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTENIDO OCULTO
+========================= */
+
+.contenido {
+    display: none;
+
+    margin-top: 25px;
+}
+
+.contenido.mostrar {
+    display: block;
+}
+
+
+/* =========================
+   ELEMENTOS GENERADOS
+   POR JAVASCRIPT
+========================= */
+
+.area {
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    background-color: #f4f7fb;
+
+    text-align: left;
+
+    transition: transform 0.2s;
+}
+
+.area:hover {
+    transform: translateX(5px);
+}
+
+.area h3 {
+    color: #1976d2;
+
+    margin-bottom: 8px;
+}
+
+.area p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   ENLACES A ARCHIVOS
+========================= */
+
+.enlace-tarjeta {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 16px;
+
+    background-color: #1976d2;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: background-color 0.2s;
+}
+
+.enlace-tarjeta:hover {
+    background-color: #1565c0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    background-color: #263238;
+
+    color: white;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
     }
 
+    .menu {
+        gap: 12px;
 
-    // Si ya tiene contenido, no volver a generarlo
+        flex-wrap: wrap;
 
-    if (contenedor.innerHTML !== "") {
-
-        boton.textContent =
-            "Ocultar " + seccion;
-
-        return;
+        justify-content: center;
     }
 
+    main {
+        grid-template-columns: 1fr;
+    }
 
-    // Obtener los datos
+    header h1 {
+        font-size: 36px;
+    }
 
-    const datos =
-        contenidos[seccion];
+    .hero {
+        min-height: 350px;
+    }
 
-
-    // Crear cada elemento
-
-    datos.forEach(function(item) {
-
-        let extra = "";
-
-
-        // Si tiene PDF
-
-        if (item.archivo) {
-
-            extra += `
-
-                <a
-                    href="${item.archivo}"
-                    target="_blank"
-                    class="enlace-tarjeta"
-                >
-                    📄 Ver archivo
-                </a>
-
-            `;
-
-        }
-
-
-        // Si tiene fecha
-
-        if (item.fecha) {
-
-            extra = `
-
-                <p>
-                    📅 Fecha de entrega:
-                    ${item.fecha}
-                </p>
-
-            ` + extra;
-
-        }
-
-
-        contenedor.innerHTML += `
-
-            <div class="area">
-
-                <h3>
-                    ${item.icono}
-                    ${item.nombre}
-                </h3>
-
-                <p>
-                    ${item.descripcion}
-                </p>
-
-                ${item.trabajo
-                    ? `<p><strong>${item.trabajo}</strong></p>`
-                    : ""
-                }
-
-                ${extra}
-
-            </div>
-
-        `;
-
-    });
-
-
-    boton.textContent =
-        "Ocultar " + seccion;
+    .hero-text {
+        text-align: center;
+    }
 
 }
