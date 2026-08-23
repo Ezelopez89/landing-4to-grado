@@ -101,5 +101,53 @@ footer {
     header h1 {
         font-size: 36px;
     }
+    .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.subtitulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: white;
+    color: #1976d2;
+    padding: 14px 25px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: transform 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
 
 }
