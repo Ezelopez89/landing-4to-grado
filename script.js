@@ -20,4 +20,6 @@ const areas = [
         descripcion: "Actividades sobre los seres vivos, el ambiente y la naturaleza."
     }
 ];
-console.log(areas);
+areas.forEach(function(area) {
+    console.log(area.nombre);
+});
