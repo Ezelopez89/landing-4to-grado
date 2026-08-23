@@ -164,7 +164,17 @@ footer {
     font-size: 45px;
     margin-bottom: 15px;
 }
+.enlace-tarjeta {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+.enlace-tarjeta:hover {
+    text-decoration: underline;
+}
 .tarjeta h2 {
     font-size: 25px;
     margin-bottom: 12px;
