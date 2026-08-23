@@ -255,8 +255,6 @@ main {
 
 .contenido.mostrar {
     display: block !important;
-    min-height: 100px;
-    background-color: yellow;
 }
 
 
