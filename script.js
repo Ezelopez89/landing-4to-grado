@@ -106,7 +106,7 @@ function mostrarContenido(seccion) {
 
     const boton =
         tarjeta.querySelector("button");
-
+contenedor.innerHTML = "<h3>¡JavaScript funciona!</h3>";
 
     // Mostrar / ocultar
 
