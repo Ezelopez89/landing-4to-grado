@@ -67,28 +67,22 @@
 
         <section id="actividades" class="tarjeta">
 
-            <div class="icono">
-                📚
-            </div>
+            <div class="icono">📚</div>
 
-            <h2>
-                Actividades
-            </h2>
+            <h2>Actividades</h2>
 
             <p>
                 En este espacio vamos a compartir las actividades
                 que estamos trabajando en clase.
             </p>
 
-            <button onclick="mostrarActividades()">
+            <button onclick="mostrarContenido('actividades')">
                 Ver actividades
             </button>
 
-            <!-- JavaScript colocará las áreas aquí -->
-
             <div
-                id="actividades-contenido"
-                class="actividades-contenido">
+                id="contenido-actividades"
+                class="contenido">
             </div>
 
         </section>
@@ -98,18 +92,23 @@
 
         <section id="proyectos" class="tarjeta">
 
-            <div class="icono">
-                🔬
-            </div>
+            <div class="icono">🔬</div>
 
-            <h2>
-                Proyectos
-            </h2>
+            <h2>Proyectos</h2>
 
             <p>
                 Conocé nuestros proyectos, experiencias y trabajos
                 realizados durante el año.
             </p>
+
+            <button onclick="mostrarContenido('proyectos')">
+                Ver proyectos
+            </button>
+
+            <div
+                id="contenido-proyectos"
+                class="contenido">
+            </div>
 
         </section>
 
@@ -118,17 +117,22 @@
 
         <section id="lecturas" class="tarjeta">
 
-            <div class="icono">
-                📖
-            </div>
+            <div class="icono">📖</div>
 
-            <h2>
-                Lecturas
-            </h2>
+            <h2>Lecturas</h2>
 
             <p>
                 Libros, cuentos y textos que estamos leyendo.
             </p>
+
+            <button onclick="mostrarContenido('lecturas')">
+                Ver lecturas
+            </button>
+
+            <div
+                id="contenido-lecturas"
+                class="contenido">
+            </div>
 
         </section>
 
@@ -137,17 +141,22 @@
 
         <section id="novedades" class="tarjeta">
 
-            <div class="icono">
-                📢
-            </div>
+            <div class="icono">📢</div>
 
-            <h2>
-                Novedades
-            </h2>
+            <h2>Novedades</h2>
 
             <p>
                 Información importante para alumnos y familias.
             </p>
+
+            <button onclick="mostrarContenido('novedades')">
+                Ver novedades
+            </button>
+
+            <div
+                id="contenido-novedades"
+                class="contenido">
+            </div>
 
         </section>
 
