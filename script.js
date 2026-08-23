@@ -15,10 +15,13 @@ const areas = [
         descripcion: "Actividades sobre nuestra provincia, el país y la sociedad."
     },
     {
-        nombre: "Ciencias Naturales",
-        icono: "🔬",
-        descripcion: "Actividades sobre los seres vivos, el ambiente y la naturaleza."
-    }
+    nombre: "Ciencias Naturales",
+    icono: "🔬",
+    descripcion: "Actividades sobre los seres vivos, el ambiente y la naturaleza.",
+    trabajo: "Flora y Fauna del Chaco",
+    fecha: "15 de septiembre de 2026",
+    archivo: "trabajo-flora-fauna-chaco.pdf"
+}
 ];
 
 
