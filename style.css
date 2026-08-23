@@ -250,12 +250,11 @@ main {
 
 .contenido {
     display: none;
-
     margin-top: 25px;
 }
 
 .contenido.mostrar {
-    display: block;
+    display: block !important;
 }
 
 
