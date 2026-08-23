@@ -10,15 +10,25 @@ body {
     color: #263238;
 }
 
+
+/* =========================
+   MENU
+========================= */
+
 nav {
     background-color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 18px 40px;
+
     position: sticky;
     top: 0;
+
     z-index: 100;
+
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -31,7 +41,6 @@ nav {
 .menu {
     display: flex;
     gap: 25px;
-    flex-wrap: wrap;
 }
 
 .menu a {
@@ -43,107 +52,27 @@ nav {
 .menu a:hover {
     color: #1976d2;
 }
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
 header {
-    min-height: 550px;
-
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("tanque.jpeg");
-
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
 
     color: white;
+
+    text-align: center;
+
     padding: 70px 20px;
 }
-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
 
-header p {
-    font-size: 20px;
-}
-
-main {
+.hero {
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-    margin-bottom: 15px;
-    color: #1976d2;
-}
-
-section p {
-    line-height: 1.6;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 30px;
-    background-color: #263238;
-    color: white;
-}
-
-@media (max-width: 700px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    .menu {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    header {
-        min-height: 450px;
-        padding: 50px 20px;
-    }
-
-    header h1 {
-        font-size: 36px;
-    }
-
-    header p {
-        font-size: 18px;
-    }
-
-    main {
-        grid-template-columns: 1fr;
-        margin: 25px auto;
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 25px 20px;
-    }
-
-}
-
-    header h1 {
-        font-size: 36px; 
-    }
-    }
-        .hero {
-    max-width: 1100px;
     margin: 0 auto;
+
     min-height: 430px;
 
     display: flex;
@@ -152,35 +81,51 @@ footer {
 
 .hero-text {
     max-width: 600px;
+
     text-align: left;
 }
 
 .subtitulo {
     font-size: 18px;
     font-weight: bold;
+
     margin-bottom: 15px;
 }
 
 .hero h1 {
     font-size: 58px;
+
     line-height: 1.1;
+
     margin-bottom: 25px;
 }
 
 .descripcion {
     font-size: 21px;
+
     line-height: 1.6;
+
     margin-bottom: 30px;
 }
 
+
+/* =========================
+   BOTON PRINCIPAL
+========================= */
+
 .boton {
     display: inline-block;
+
     background-color: white;
+
     color: #1976d2;
+
     padding: 14px 25px;
+
     border-radius: 30px;
 
     text-decoration: none;
+
     font-weight: bold;
 
     transition: transform 0.2s;
@@ -190,72 +135,225 @@ footer {
     transform: translateY(-3px);
 }
 
+
+/* =========================
+   TARJETAS
+========================= */
+
+main {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
 .tarjeta {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
     text-align: center;
+
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .tarjeta:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .icono {
     font-size: 45px;
+
     margin-bottom: 15px;
 }
-.enlace-tarjeta {
-    display: inline-block;
-    margin-top: 20px;
-    color: #1976d2;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.enlace-tarjeta:hover {
-    text-decoration: underline;
-}
 .tarjeta h2 {
     font-size: 25px;
+
     margin-bottom: 12px;
-}
-.actividades-contenido {
-    display: none;
-    margin-top: 25px;
-}
 
-.actividades-contenido.mostrar {
-    display: grid;
-    gap: 15px;
-}
-
-.area {
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #f4f7fb;
-    text-align: left;
-}
-
-.area h3 {
     color: #1976d2;
-    margin-bottom: 8px;
 }
 
-.area p {
-    margin: 0;
+.tarjeta p {
+    line-height: 1.6;
 }
+
+
+/* =========================
+   BOTONES DE TARJETAS
+========================= */
 
 .tarjeta button {
     margin-top: 20px;
+
     padding: 12px 22px;
+
     border: none;
+
     border-radius: 25px;
+
     background-color: #1976d2;
+
     color: white;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .tarjeta button:hover {
     background-color: #1565c0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    display: none;
+
+    margin-top: 25px;
+}
+
+.contenido.mostrar {
+    display: block;
+}
+
+
+/* =========================
+   AREAS
+========================= */
+
+.area {
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    background-color: #f4f7fb;
+
+    text-align: left;
+
+    transition: transform 0.2s;
+}
+
+.area:hover {
+    transform: translateX(5px);
+}
+
+.area h3 {
+    color: #1976d2;
+
+    margin-bottom: 8px;
+}
+
+.area p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   ENLACES A PDF
+========================= */
+
+.enlace-tarjeta {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 16px;
+
+    background-color: #1976d2;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: background-color 0.2s;
+}
+
+.enlace-tarjeta:hover {
+    background-color: #1565c0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    background-color: #263238;
+
+    color: white;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
 }
