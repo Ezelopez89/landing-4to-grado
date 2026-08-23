@@ -150,4 +150,23 @@ footer {
     transform: translateY(-3px);
 }
 
+    .tarjeta {
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
 }
