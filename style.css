@@ -150,7 +150,7 @@ footer {
     transform: translateY(-3px);
 }
 
-    .tarjeta {
+.tarjeta {
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
