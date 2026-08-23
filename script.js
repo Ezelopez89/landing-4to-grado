@@ -23,3 +23,21 @@ const areas = [
 areas.forEach(function(area) {
     console.log(area.nombre);
 });
+function mostrarAreas() {
+
+    const contenedor = document.getElementById("actividades-contenido");
+
+    contenedor.innerHTML = "";
+
+    areas.forEach(function(area) {
+
+        contenedor.innerHTML += `
+            <div class="area">
+                <h3>${area.icono} ${area.nombre}</h3>
+                <p>${area.descripcion}</p>
+            </div>
+        `;
+
+    });
+
+}
