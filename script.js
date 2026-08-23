@@ -20,9 +20,8 @@ const areas = [
         descripcion: "Actividades sobre los seres vivos, el ambiente y la naturaleza."
     }
 ];
-areas.forEach(function(area) {
-    console.log(area.nombre);
-});
+
+
 function mostrarAreas() {
 
     const contenedor = document.getElementById("actividades-contenido");
@@ -41,4 +40,12 @@ function mostrarAreas() {
     });
 
 }
-mostrarAreas();
+
+
+function mostrarActividades() {
+
+    const contenido = document.getElementById("actividades-contenido");
+
+    contenido.classList.toggle("mostrar");
+
+}
