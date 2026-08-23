@@ -74,10 +74,17 @@ function mostrarAreas() {
 }
 
 function mostrarActividades() {
-mostrarAreas();
+
     const contenido = document.getElementById("actividades-contenido");
+    const boton = document.querySelector("#actividades button");
 
     contenido.classList.toggle("mostrar");
+
+    if (contenido.classList.contains("mostrar")) {
+        boton.textContent = "Ocultar actividades";
+    } else {
+        boton.textContent = "Ver actividades";
+    }
 
 }
 mostrarAreas();
