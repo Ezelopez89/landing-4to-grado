@@ -80,3 +80,4 @@ mostrarAreas();
     contenido.classList.toggle("mostrar");
 
 }
+mostrarAreas();
