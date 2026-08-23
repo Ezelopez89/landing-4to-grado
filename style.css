@@ -43,7 +43,13 @@ nav {
     color: #1976d2;
 }
 header {
-    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("tanque.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
     color: white;
     text-align: center;
     padding: 70px 20px;
