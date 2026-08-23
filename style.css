@@ -1,3 +1,7 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ body {
 
 
 /* =========================
-   MENU
+   MENÚ
 ========================= */
 
 nav {
@@ -47,6 +51,8 @@ nav {
     text-decoration: none;
     color: #263238;
     font-weight: bold;
+
+    transition: color 0.2s;
 }
 
 .menu a:hover {
@@ -59,11 +65,17 @@ nav {
 ========================= */
 
 header {
-    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    background-image:
+        linear-gradient(
+            rgba(25, 118, 210, 0.65),
+            rgba(66, 165, 245, 0.65)
+        ),
+        url("tanque.jpeg");
+
+    background-size: cover;
+    background-position: center;
 
     color: white;
-
-    text-align: center;
 
     padding: 70px 20px;
 }
@@ -76,6 +88,7 @@ header {
     min-height: 430px;
 
     display: flex;
+
     align-items: center;
 }
 
@@ -87,6 +100,7 @@ header {
 
 .subtitulo {
     font-size: 18px;
+
     font-weight: bold;
 
     margin-bottom: 15px;
@@ -110,7 +124,7 @@ header {
 
 
 /* =========================
-   BOTON PRINCIPAL
+   BOTÓN DEL ENCABEZADO
 ========================= */
 
 .boton {
@@ -137,7 +151,7 @@ header {
 
 
 /* =========================
-   TARJETAS
+   CONTENIDO PRINCIPAL
 ========================= */
 
 main {
@@ -154,6 +168,11 @@ main {
     gap: 25px;
 }
 
+
+/* =========================
+   TARJETAS
+========================= */
+
 .tarjeta {
     background-color: white;
 
@@ -161,17 +180,21 @@ main {
 
     border-radius: 15px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
 
     text-align: center;
 
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
 .tarjeta:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .icono {
@@ -194,7 +217,7 @@ main {
 
 
 /* =========================
-   BOTONES DE TARJETAS
+   BOTONES DE LAS TARJETAS
 ========================= */
 
 .tarjeta button {
@@ -214,7 +237,9 @@ main {
 
     cursor: pointer;
 
-    transition: background-color 0.2s, transform 0.2s;
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
 }
 
 .tarjeta button:hover {
@@ -225,7 +250,7 @@ main {
 
 
 /* =========================
-   CONTENIDO
+   CONTENIDO OCULTO
 ========================= */
 
 .contenido {
@@ -240,7 +265,8 @@ main {
 
 
 /* =========================
-   AREAS
+   ELEMENTOS GENERADOS
+   POR JAVASCRIPT
 ========================= */
 
 .area {
@@ -273,7 +299,7 @@ main {
 
 
 /* =========================
-   ENLACES A PDF
+   ENLACES A ARCHIVOS
 ========================= */
 
 .enlace-tarjeta {
