@@ -91,7 +91,6 @@ const contenidos = {
 
 };
 
-
 // ========================================
 // FUNCIÓN PARA MOSTRAR CONTENIDO
 // ========================================
@@ -106,7 +105,7 @@ function mostrarContenido(seccion) {
 
     const boton =
         tarjeta.querySelector("button");
-contenedor.innerHTML = "<h3>¡JavaScript funciona!</h3>";
+
 
     // Mostrar / ocultar
 
@@ -124,104 +123,118 @@ contenedor.innerHTML = "<h3>¡JavaScript funciona!</h3>";
     }
 
 
-    // Si ya tiene contenido,
-    // no volver a crearlo
-
-    if (contenedor.innerHTML !== "") {
-
-        boton.textContent =
-            "Ocultar " + seccion;
-
-        return;
-    }
-
-
-    // Obtener datos
+    // Obtener los datos
 
     const datos =
         contenidos[seccion];
 
 
-    // Crear contenido
+    // Limpiar el contenido anterior
+
+    contenedor.innerHTML = "";
+
+
+    // Crear cada elemento
 
     datos.forEach(function(item) {
 
-        let extra = "";
+        const area =
+            document.createElement("div");
+
+        area.className =
+            "area";
+
+
+        // Título
+
+        const titulo =
+            document.createElement("h3");
+
+        titulo.textContent =
+            item.icono + " " + item.nombre;
+
+
+        // Descripción
+
+        const descripcion =
+            document.createElement("p");
+
+        descripcion.textContent =
+            item.descripcion;
+
+
+        area.appendChild(titulo);
+
+        area.appendChild(descripcion);
+
+
+        // Trabajo
+
+        if (item.trabajo) {
+
+            const trabajo =
+                document.createElement("p");
+
+            trabajo.innerHTML =
+                "<strong>" +
+                item.trabajo +
+                "</strong>";
+
+            area.appendChild(trabajo);
+        }
 
 
         // Fecha
 
         if (item.fecha) {
 
-            extra += `
-                <p>
-                    📅 Fecha de entrega:
-                    ${item.fecha}
-                </p>
-            `;
+            const fecha =
+                document.createElement("p");
 
+            fecha.textContent =
+                "📅 Fecha de entrega: " +
+                item.fecha;
+
+            area.appendChild(fecha);
         }
 
 
-        // Archivo
+        // PDF
 
         if (item.archivo) {
 
-            extra += `
-                <a
-                    href="${item.archivo}"
-                    target="_blank"
-                    class="enlace-tarjeta"
-                >
-                    📄 Ver archivo
-                </a>
-            `;
+            const enlace =
+                document.createElement("a");
 
+            enlace.href =
+                item.archivo;
+
+            enlace.target =
+                "_blank";
+
+            enlace.className =
+                "enlace-tarjeta";
+
+            enlace.textContent =
+                "📄 Ver archivo";
+
+            area.appendChild(enlace);
         }
 
 
-        // Crear elemento
+        // Agregar el área al contenedor
 
-        contenedor.innerHTML += `
-
-            <div class="area">
-
-                <h3>
-                    ${item.icono}
-                    ${item.nombre}
-                </h3>
-
-                <p>
-                    ${item.descripcion}
-                </p>
-
-                ${
-                    item.trabajo
-                    ? `
-                        <p>
-                            <strong>
-                                ${item.trabajo}
-                            </strong>
-                        </p>
-                    `
-                    : ""
-                }
-
-                ${extra}
-
-            </div>
-
-        `;
+        contenedor.appendChild(area);
 
     });
 
+
+    // Cambiar texto del botón
 
     boton.textContent =
         "Ocultar " + seccion;
 
 }
-
-
 // ========================================
 // CONECTAR BOTONES
 // ========================================
