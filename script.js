@@ -74,7 +74,7 @@ function mostrarAreas() {
 }
 
 function mostrarActividades() {
-
+mostrarAreas();
     const contenido = document.getElementById("actividades-contenido");
 
     contenido.classList.toggle("mostrar");
