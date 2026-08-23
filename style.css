@@ -65,12 +65,7 @@ nav {
 ========================= */
 
 header {
-    background-image:
-        linear-gradient(
-            rgba(25, 118, 210, 0.65),
-            rgba(66, 165, 245, 0.65)
-        ),
-        url("tanque.jpeg");
+    background-image: url("tanque.jpeg");
 
     background-size: cover;
     background-position: center;
