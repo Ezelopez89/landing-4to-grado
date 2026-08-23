@@ -33,17 +33,45 @@ function mostrarAreas() {
 
     areas.forEach(function(area) {
 
+        let contenidoExtra = "";
+
+        if (area.trabajo) {
+
+            contenidoExtra = `
+                <p>
+                    <strong>Trabajo práctico:</strong>
+                    ${area.trabajo}
+                </p>
+
+                <p>
+                    📅 Fecha de entrega: ${area.fecha}
+                </p>
+
+                <a
+                    href="${area.archivo}"
+                    target="_blank"
+                    class="enlace-tarjeta"
+                >
+                    📄 Ver trabajo práctico
+                </a>
+            `;
+        }
+
         contenedor.innerHTML += `
             <div class="area">
+
                 <h3>${area.icono} ${area.nombre}</h3>
+
                 <p>${area.descripcion}</p>
+
+                ${contenidoExtra}
+
             </div>
         `;
 
     });
 
 }
-
 
 function mostrarActividades() {
 
